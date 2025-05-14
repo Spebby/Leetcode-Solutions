@@ -1,0 +1,15 @@
+# My Leetcode Problems
+
+This is a repository containing my solutions to some leetcode problems. I don't
+actually like leetcode very much, but every now and then I feel like doing one
+or two. I make use of [leetgo](https://github.com/j178/leetgo) as a testing
+framework, to automate acquiring and submitting problems.
+
+## Usage
+
+You can either use the `.yaml` file provided in this repository, or create your
+own by running `leetgo init` after entering the nix shell. Speaking of, I make
+use of a flake to manage some basic dependencies for the testing environment.
+Not everything I use is present in this flake, but everything you "need" is
+included. Neovim, for exmaple, is not included in the flake as I didn't want to
+override my configuration from outside the shell while inside the shell.
