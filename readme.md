@@ -1,5 +1,7 @@
 # My Leetcode Problems
 
+[![wakatime](https://wakatime.com/badge/user/6c1b4d80-35ad-487a-a081-efc861c8d411/project/051f59b9-ac77-4a63-9e76-ec2f78a992c8.svg)](https://wakatime.com/badge/user/6c1b4d80-35ad-487a-a081-efc861c8d411/project/051f59b9-ac77-4a63-9e76-ec2f78a992c8)
+
 This is a repository containing my solutions to some leetcode problems. I don't
 actually like leetcode very much, but every now and then I feel like doing one
 or two. I make use of [leetgo](https://github.com/j178/leetgo) as a testing
