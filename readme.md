@@ -15,3 +15,5 @@ use of a flake to manage some basic dependencies for the testing environment.
 Not everything I use is present in this flake, but everything you "need" is
 included. Neovim, for exmaple, is not included in the flake as I didn't want to
 override my configuration from outside the shell while inside the shell.
+
+To use the shell, simply type `nix develop`

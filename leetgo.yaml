@@ -5,14 +5,15 @@ author: Thom Mott
 # Language of the question description: 'zh' (Simplified Chinese) or 'en' (English).
 language: en
 code:
-  # Language of code generated for questions: go, cpp, python, java... 
+  # Language of code generated for questions: go, cpp, python, java...
   # (will be overridden by command line flag -l/--lang).
   lang: cpp
   # The default template to generate filename (without extension), e.g. {{.Id}}.{{.Slug}}
   # Available attributes: Id, Slug, Title, Difficulty, Lang, SlugIsMeaningful
   # (Most questions have descriptive slugs, but some consist of random characters. The SlugIsMeaningful boolean indicates whether a slug is meaningful.)
   # Available functions: lower, upper, trim, padWithZero, toUnderscore, group.
-  filename_template: '{{ .Id | padWithZero 4 }}{{ if .SlugIsMeaningful }}.{{ .Slug }}{{ end }}'
+  filename_template:
+    "{{ .Id | padWithZero 4 }}{{ if .SlugIsMeaningful }}.{{ .Slug }}{{ end }}"
   # Generate question description into a separate question.md file, otherwise it will be embed in the code file.
   separate_description_file: true
   # Default modifiers for all languages.
@@ -59,18 +60,20 @@ contest:
   # Base directory to put generated contest questions.
   out_dir: contest
   # Template to generate filename of the question.
-  filename_template: '{{ .ContestShortSlug }}/{{ .Id }}{{ if .SlugIsMeaningful }}.{{ .Slug }}{{ end }}'
+  filename_template:
+    "{{ .ContestShortSlug }}/{{ .Id }}{{ if .SlugIsMeaningful }}.{{ .Slug }}{{
+    end }}"
   # Open the contest page in browser after generating.
   open_in_browser: true
 # Editor settings to open generated files.
 editor:
   # Use a predefined editor: vim, vscode, goland
   # Set to 'none' to disable, set to 'custom' to provide your own command and args.
-  use: none
+  use: custom
   # Custom command to open files.
-  command: ""
+  command: "nvim"
   # Arguments to your custom command.
   # String contains {{.CodeFile}}, {{.TestFile}}, {{.DescriptionFile}}, {{.TestCasesFile}} will be replaced with corresponding file path.
   # {{.Folder}} will be substituted with the output directory.
   # {{.Files}} will be substituted with the list of all file paths.
-  args: ""
+  args: "{{.CodeFile}}"
